@@ -7,4 +7,4 @@ tags:
 
 ## Subsystem: Actuator
 
-![Block Diagram][Pictures/Block Diagram-314-Noah.drawio.png]
+![Test](/Nbrent/doc/assets/BlockDiagram.png)
