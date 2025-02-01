@@ -7,6 +7,6 @@ tags:
 
 ## Subsystem: Actuator
 
-![Block Diagram](/docs/BlockDiagram.png)
+![Block Diagram](https://github.com/NBrentASU/NBrent/raw/main/docs/BlockDiagram.png)
 
 Above is the Actuation Subsystem for Team 310 created by Noah Brent. This achieves actuation via data sent from the sensor subsystem which turns on or off the electromagnets. Depending on the data recieved, an SPI motor driver chip will send current into the electromagnet to pull and push the steel ball by switching the current and changing the magnetic field. Data regarding these switchings and timings will then be sent to the MQTT and HMI subsystems for recording and displaying respectively.
