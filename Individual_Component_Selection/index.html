@@ -435,11 +435,6 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-        
           <li class="md-nav__item">
   <a href="#selected-pic-info" class="md-nav__link">
     Selected PIC Info
@@ -451,6 +446,18 @@
   <a href="#necessary-pins" class="md-nav__link">
     Necessary Pins
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mplabx-no-error-mcc-melody-support" class="md-nav__link">
+    MPLabX (No Error &amp; MCC / Melody Support)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -691,11 +698,6 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-        
           <li class="md-nav__item">
   <a href="#selected-pic-info" class="md-nav__link">
     Selected PIC Info
@@ -707,6 +709,18 @@
   <a href="#necessary-pins" class="md-nav__link">
     Necessary Pins
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mplabx-no-error-mcc-melody-support" class="md-nav__link">
+    MPLabX (No Error &amp; MCC / Melody Support)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -898,7 +912,7 @@
 </table>
 <h4 id="selection">Selection</h4>
 <p>Despite having some downsides memory-wise when compared to the PIC18F27Q10 (SOIC/28), the PIC18F24Q24 (SOIC/28) had the datasheet that best-described functionality regarding our use case which is why the component was selected.</p>
-<h3 id="selected-pic-info">Selected PIC Info</h3>
+<h4 id="selected-pic-info">Selected PIC Info</h4>
 <table>
 <thead>
 <tr>
@@ -925,97 +939,100 @@
 </tr>
 <tr>
 <td>Examples</td>
-<td>2</td>
+<td><a href="https://github.com/eziya/PIC18F_Examples">Examples</a></td>
 </tr>
 <tr>
 <td>External Resources</td>
-<td>45</td>
+<td><a href="https://github.com/eziya/PIC18F_Examples">External Resources</a></td>
 </tr>
 <tr>
 <td>Unit Cost</td>
-<td>2</td>
+<td>$0.95</td>
 </tr>
 <tr>
 <td>Max IC Current</td>
-<td>5</td>
+<td>250 mA</td>
 </tr>
 <tr>
 <td>Max GPIO Current</td>
-<td>0</td>
+<td>20 mA</td>
 </tr>
 <tr>
 <td>Interrupt Support</td>
-<td>1</td>
+<td>Yes</td>
 </tr>
 <tr>
 <td>Requirements</td>
-<td>5</td>
+<td><a href="https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ProductDocuments/DataSheets/PIC18F24-25Q24-Microcontroller-Data-Sheet-DS40002517.pdf">Requirements (On Datasheet)</a></td>
 </tr>
 <tr>
 <td>MPLabX Support</td>
-<td>0</td>
+<td>Yes</td>
 </tr>
 <tr>
 <td>MCC Support</td>
-<td>1</td>
+<td>Yes</td>
 </tr>
 </tbody>
 </table>
-<h3 id="necessary-pins">Necessary Pins</h3>
+<h4 id="necessary-pins">Necessary Pins</h4>
 <table>
 <thead>
 <tr>
 <th>Module</th>
 <th># Available</th>
 <th>Needed</th>
-<th>Associated Pins (or * for any)</th>
+<th>Associated Pins</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>UART</td>
-<td></td>
+<td>2</td>
 <td>2</td>
 <td>GPIO43 ~ GPIO44, GPIO17 ~ GPIO18</td>
 </tr>
 <tr>
 <td>External SPI</td>
-<td></td>
 <td>3</td>
-<td>N/A</td>
+<td>3</td>
+<td>SDI, SDO, SCK</td>
 </tr>
 <tr>
 <td>I2C</td>
-<td></td>
+<td>2</td>
 <td>0</td>
-<td>N/A</td>
+<td>SDA, SDL</td>
 </tr>
 <tr>
 <td>GPIO</td>
-<td></td>
+<td>2</td>
 <td>2</td>
 <td>*</td>
 </tr>
 <tr>
 <td>ADC</td>
-<td></td>
+<td>19</td>
 <td>0</td>
-<td>N/A</td>
+<td>ADC</td>
 </tr>
 <tr>
 <td>PWM</td>
-<td></td>
+<td>3</td>
 <td>0</td>
 <td>*</td>
 </tr>
 <tr>
 <td>ICSP</td>
-<td></td>
 <td>3</td>
-<td>N/A</td>
+<td>3</td>
+<td>MOSI, MISO, SCK</td>
 </tr>
 </tbody>
 </table>
+<h4 id="mplabx-no-error-mcc-melody-support">MPLabX (No Error &amp; MCC / Melody Support)</h4>
+<p><a class="glightbox" href="https://github.com/NBrentASU/NBrent/blob/main/NoErr.PNG?raw=true" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="https://github.com/NBrentASU/NBrent/blob/main/NoErr.PNG?raw=true" /></a></p>
+<p>Crashing on MCC step, on website it states compatability. I can only show no errors for now. Will update.</p>
 <h3 id="on-board-switching-voltage-regulator">On-Board Switching Voltage Regulator</h3>
 <table>
 <thead>
