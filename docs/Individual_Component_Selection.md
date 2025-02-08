@@ -22,19 +22,9 @@ title: Individual Component Selection
 
 | Components         |  Pros       |  Cons       |
 | ------------------ | ----------- | ----------- |
-|                    |             |             |
-|                    |             |             |
-|                    |             |             |
-|                    |             |             |
-|                    |             |             |
-|                    |             |             |
-|                    |             |             |
-|                    |             |             |
-|                    |             |             |
-|                    |             |             |
-|                    |             |             |
-|                    |             |             |
-|                    |             |             |
+|![](https://github.com/NBrentASU/NBrent/blob/main/PIC1.png?raw=true)[PIC18F47Q10 (TQFP/44)](https://www.microchip.com/en-us/product/pic18f47q10)|Pins distributed on 4 sides (more room for traces) / Extra pins should something come up / Same as class DIP| 44 pins (excess of needed) / Difficulty soldering / Extremely small and dense configuration at 10x10x1mm |
+|![](https://github.com/NBrentASU/NBrent/blob/main/PIC2.png?raw=true)[PIC18F27Q10 (SOIC/28)](https://www.microchip.com/en-us/product/pic18f27q10#Documentation)| 7.5x17.9mm / Most pins will be used, minimizing excess soldering / Easier soldering / 128K Bytes (Flash) / 1k EEPROM | More pins per side / If a requirement is overlooked now, little to no extra pins to fix it / 31 Deep Hardware Stack / 3.6K SRAM / Confusing documentation regarding pins |
+|![](https://github.com/NBrentASU/NBrent/blob/main/PIC3.png?raw=true)[PIC18F24Q24 (SOIC/28)](https://www.microchip.com/en-us/product/pic18f24q24#Documentation)| 7.5x17.9mm / Most pins will be used, minimizing excess soldering / Easier soldering / 128 Deep Hardware Stack / 4K SRAM / Better information for my use case | More pins per side / If a requirement is overlooked now, little to no extra pins to fix it / 64K Bytes (Flash) / 500 EEPROM |
 
 #### Selection
 
