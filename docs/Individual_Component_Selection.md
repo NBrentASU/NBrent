@@ -18,7 +18,7 @@ title: Individual Component Selection
 
 Despite having some downsides memory-wise when compared to the PIC18F27Q10 (SOIC/28), the PIC18F24Q24 (SOIC/28) had the datasheet that best-described functionality regarding our use case which is why the component was selected.
 
-### Selected PIC Info
+#### Selected PIC Info
 
 | PIC18F24Q24 Info   |  Answer     |
 | ------------------ | ----------- |
@@ -26,27 +26,33 @@ Despite having some downsides memory-wise when compared to the PIC18F27Q10 (SOIC
 | Datasheet          | [Datasheet](https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ProductDocuments/DataSheets/PIC18F24-25Q24-Microcontroller-Data-Sheet-DS40002517.pdf)        |
 | Application Notes  | [Application Notes](https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ApplicationNotes/ApplicationNotes/AN5226-Getting-Started-PIC18-Q24-Family-DS00005226.pdf)        |
 | Vendor             | [Microchip](https://www.microchip.com/)        |
-| Examples           | 2           |
-| External Resources | 45          |
-| Unit Cost          | 2           |
-| Max IC Current     | 5           |
-| Max GPIO Current   | 0           |
-| Interrupt Support  | 1           |
-| Requirements       | 5           |
-| MPLabX Support     | 0           |
-| MCC Support        | 1           |
+| Examples           | [Examples](https://github.com/eziya/PIC18F_Examples)          |
+| External Resources | [External Resources](https://github.com/eziya/PIC18F_Examples)         |
+| Unit Cost          | $0.95         |
+| Max IC Current     | 250 mA         |
+| Max GPIO Current   | 20 mA          |
+| Interrupt Support  | Yes         |
+| Requirements       | [Requirements (On Datasheet)](https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ProductDocuments/DataSheets/PIC18F24-25Q24-Microcontroller-Data-Sheet-DS40002517.pdf)                  |
+| MPLabX Support     | Yes         |
+| MCC Support        | Yes           |
 
-### Necessary Pins
+#### Necessary Pins
 
-| Module         | # Available | Needed | Associated Pins (or * for any) |
+| Module         | # Available | Needed | Associated Pins |
 | -------------- | ----------- | ------ | ------------------------------ |
-| UART           |             | 2      |GPIO43 ~ GPIO44, GPIO17 ~ GPIO18|
-| External SPI   |             | 3      | N/A                            |
-| I2C            |             | 0      | N/A                            |
-| GPIO           |             | 2      | *                              |
-| ADC            |             | 0      | N/A                            |
-| PWM            |             | 0      | *                              |
-| ICSP           |             | 3      | N/A                            |
+| UART           |  2           | 2      |GPIO43 ~ GPIO44, GPIO17 ~ GPIO18|
+| External SPI   |  3           | 3      | SDI, SDO, SCK                            |
+| I2C            |  2           | 0      | SDA, SDL                           |
+| GPIO           |  2           | 2      | *                              |
+| ADC            |  19           | 0      | ADC                           |
+| PWM            |  3           | 0      | *                              |
+| ICSP           |  3          | 3      | MOSI, MISO, SCK                         |
+
+#### MPLabX (No Error & MCC / Melody Support)
+
+![](https://github.com/NBrentASU/NBrent/blob/main/NoErr.PNG?raw=true)
+
+Crashing on MCC step, on website it states compatability. I can only show no errors for now. Will update.
 
 ### On-Board Switching Voltage Regulator
 
