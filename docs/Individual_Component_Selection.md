@@ -6,18 +6,6 @@ title: Individual Component Selection
 
 #### Microcontroller
 
-#### Pin Requirements
-
-| Module         | # Available | Needed | Associated Pins (or * for any) |
-| -------------- | ----------- | ------ | ------------------------------ |
-| UART           |             | 2      |GPIO43 ~ GPIO44, GPIO17 ~ GPIO18|
-| External SPI   |             | 3      | N/A                            |
-| I2C            |             | 0      | N/A                            |
-| GPIO           |             | 2      | *                              |
-| ADC            |             | 0      | N/A                            |
-| PWM            |             | 0      | *                              |
-| ICSP           |             | 3      | N/A                            |
-
 ### Microcontrollers
 
 | Components         |  Pros       |  Cons       |
@@ -34,10 +22,10 @@ Despite having some downsides memory-wise when compared to the PIC18F27Q10 (SOIC
 
 | PIC18F24Q24 Info   |  Answer     |
 | ------------------ | ----------- |
-| Product Page       | Link        |
-| Datasheet          | Link        |
-| Application Notes  | Link        |
-| Vendor             | Digikey     |
+| Product Page       | [PIC18F24Q24 (SOIC/28)](https://www.microchip.com/en-us/product/pic18f24q24#Documentation)        |
+| Datasheet          | [Datasheet](https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ProductDocuments/DataSheets/PIC18F24-25Q24-Microcontroller-Data-Sheet-DS40002517.pdf)        |
+| Application Notes  | [Application Notes](https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ApplicationNotes/ApplicationNotes/AN5226-Getting-Started-PIC18-Q24-Family-DS00005226.pdf)        |
+| Vendor             | [Microchip](https://www.microchip.com/)        |
 | Examples           | 2           |
 | External Resources | 45          |
 | Unit Cost          | 2           |
@@ -47,6 +35,18 @@ Despite having some downsides memory-wise when compared to the PIC18F27Q10 (SOIC
 | Requirements       | 5           |
 | MPLabX Support     | 0           |
 | MCC Support        | 1           |
+
+### Necessary Pins
+
+| Module         | # Available | Needed | Associated Pins (or * for any) |
+| -------------- | ----------- | ------ | ------------------------------ |
+| UART           |             | 2      |GPIO43 ~ GPIO44, GPIO17 ~ GPIO18|
+| External SPI   |             | 3      | N/A                            |
+| I2C            |             | 0      | N/A                            |
+| GPIO           |             | 2      | *                              |
+| ADC            |             | 0      | N/A                            |
+| PWM            |             | 0      | *                              |
+| ICSP           |             | 3      | N/A                            |
 
 ### On-Board Switching Voltage Regulator
 
@@ -58,7 +58,7 @@ Despite having some downsides memory-wise when compared to the PIC18F27Q10 (SOIC
 
 #### Selection
 
-
+Due to the voltage more than likely not needing to change from 3.3V, the best option would be the LM267 as it provides enough amperage at 3.3V to power my board. Its size is a bit small but only 6 of the pins need soldering and it will be achievable. The flexibility of the input voltage allows the power to change if needed and still be able to handle regulating the board power.
 
 ### Electromagnet Switching Voltage Regulator 
 
@@ -82,6 +82,7 @@ The LM2594M is the best option for my electromagnet’s power needs. The wide ra
 
 #### Selection
 
+The homemade magnet will be best for the actuator subsystem due to its use case. During component research, anything high power was out of budget and did not have a “through hole” for a marble to accelerate through. Buying and assembling the magnets from scratch allows for a high level of control over input voltage and amperage to adjust the Gauss strength.
 
 ### Magnet Driver Component
 
@@ -93,17 +94,19 @@ The LM2594M is the best option for my electromagnet’s power needs. The wide ra
 
 #### Selection
 
+The NCV chip is the best overall option due to its SPI support, the wide output range of voltages and amperages, wide pin spacings, and taking the same 3.3V as the microcontroller (as logic power only). There are two downsides however, the first of which is the 16-bit serial buses of this driver communicating with the 8-bit microcontroller. This will take extra coding but should work due to my microcontroller having selectable frequencies up to 64 MHZ and the driver having 5 MHZ. This means that the microcontroller can send 2 8-bit strings to the driver so that it will register as a single 16-bit string and the driver’s sending a 16-bit string being able to be broken and stored into 2 8-bit strings for interpretation on chip. The second of which is this chip has 3 outputs instead of an even 4 to handle both magnets. This is easily solvable by either using 2 of these chips or integrating a logic circuit to switch between magnets.
 
 ### Power Input
 
 | Components         |  Pros       |  Cons       |
 | ------------------ | ----------- | ----------- |
-|![](?raw=true)[]()|  |  |
-|![](?raw=true)[]()|  |  |
-|![](?raw=true)[]()|  |  |
+|![](https://github.com/NBrentASU/NBrent/blob/main/PI1.jpg?raw=true)[PJ-102AH](https://www.digikey.com/en/products/detail/same-sky-formerly-cui-devices-/PJ-102AH/408448?gclsrc=aw.ds&&utm_adgroup=&utm_source=google&utm_medium=cpc&utm_campaign=PMax_Product_Connectors%2C%20Interconnects&utm_term=&utm_content=&utm_id=go_cmp-20461032180_adg-_ad-__dev-c_ext-_prd-408448_sig-Cj0KCQiA-5a9BhCBARIsACwMkJ4MZP29gkNgu7pEoUSMZFq5I9cTc-L2KfLwFuuW4zQ1mDTi0FILMmYaAiuXEALw_wcB&gad_source=1&gclid=Cj0KCQiA-5a9BhCBARIsACwMkJ4MZP29gkNgu7pEoUSMZFq5I9cTc-L2KfLwFuuW4zQ1mDTi0FILMmYaAiuXEALw_wcB&gclsrc=aw.ds)| 5A rated / Simple 3 prong / $0.76 per jack / 24 VDC | Not technically surface mount, can be altered to be |
+|![](https://github.com/NBrentASU/NBrent/blob/main/PI2.jpg?raw=true)[PJ-002B](https://www.digikey.com/en/products/detail/same-sky-formerly-cui-devices/PJ-002B/96965)| 2.5A rated / Simple 3 prong / $0.49 per jack / 24 VDC | Not technically surface mount, can be altered to be |
+|![](https://github.com/NBrentASU/NBrent/blob/main/PI3.jpg?raw=true)[54-00127](https://www.digikey.com/en/products/detail/tensility-international-corp/54-00127/9685436)| 6A rated / 48 V Input / $0.61 per jack / Simple 3 prong / Non-standard casing, either pro or con | Not technically surface mount, can be altered to be |
 
 #### Selection
 
+Most barrel jacks at this level come down to personal preference as my maximum expected load is lower than most of the barrel’s minimum ratings. Given this the PJ-102AH will be used. Even though it is slightly more expensive it gives a bit more headway at 5A rather than 2.5A while looking standard.
 
 ### Non-Critical, Debugging Components
 
