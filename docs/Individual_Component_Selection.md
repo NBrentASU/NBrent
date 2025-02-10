@@ -50,9 +50,9 @@ Despite having some downsides memory-wise when compared to the PIC18F27Q10 (SOIC
 
 #### MPLabX (No Error & MCC / Melody Support)
 
-![](https://github.com/NBrentASU/NBrent/blob/main/NoErr.PNG?raw=true)
+![](https://github.com/NBrentASU/NBrent/blob/main/PICNoErrMCC.PNG?raw=true)
 
-Crashing on MCC step, on website it states compatability. I can only show no errors for now. Will update.
+PIC loaded in MCC with no errors.
 
 ### On-Board Switching Voltage Regulator
 
