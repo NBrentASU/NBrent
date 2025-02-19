@@ -5,13 +5,19 @@ tags:
 - tag2
 ---
 
-## I've Changed This
+## Project Definition
 
-And this
+The project for Team 310 in EGR 314 is to design a STEM museum exhibit to teach any aspect or principle of STEM to K-12th grade students. Our team decided to demonstrate electromagnetism by accelerating a steel marble along a circular track either forwards or backwards. This will be accompanied by an HMI system to display data and control speeds/timings of the actuator. A sensor system will use a shift register to detect where the ball is and control electromagnetic switchings. A live print out of this data will be tracked and stored on an MQTT internet server and conveyed to the HMI server for display.
 
-- And this
-- And this
-- And this
-- And this
+## Team Contribution
+
+For Team 310, my contribution is the actuator subsystem.
+
+Some Requirements for this system include:
+
+- SPI communication with drivers and microchip
+- Bidirectional control of marble
+- Recieving and sending messages to other systems through UART
+- Attempt to make marble accelerated as fast as possible
   
-End of Changes  
+Pages will be updated throughout the semester to demonstrate project progress
