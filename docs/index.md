@@ -21,3 +21,5 @@ Some Requirements for this system include:
 - Attempt to make marble accelerated as fast as possible
   
 Pages will be updated throughout the semester to demonstrate project progress
+
+Link to return to [Team 310's Website](https://asu-egr314-2025-s-310.github.io/)
