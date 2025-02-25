@@ -21,4 +21,4 @@ Below are the regulator maximums in comparison to the barrel jack supply we will
 
 ![](https://github.com/NBrentASU/NBrent/blob/main/Power3.PNG?raw=true)
 
-Link to Power Budget.
+Link to [Actuator Power Budget](https://docs.google.com/spreadsheets/d/1hx8j3AyVD77vdARufEJuIN7U5BJ1CvyTHlxSPE7HEag/edit?usp=sharing).
