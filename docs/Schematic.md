@@ -9,6 +9,7 @@ tags:
 
 ![](https://github.com/NBrentASU/NBrent/blob/main/schematicpng.PNG?raw=true)
 
+[Link to Actuator Schematic PDF]()
 
 Above is the schematic of the actuator subsystem in Altium. The PIC microcontroller is a custom-made symbol due to importing issues, all other components come from Digikey or the built-in manufacturer part search. Altium was chosen as the platform due to its online-sharing capabilities as well as the built-in library. 
 

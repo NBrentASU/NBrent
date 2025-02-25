@@ -41,12 +41,12 @@ Despite having some downsides memory-wise when compared to the PIC18F27Q10 (SOIC
 | Module         | # Available | Needed | Associated Pins |
 | -------------- | ----------- | ------ | ------------------------------ |
 | UART           |  2           | 2      |GPIO43 ~ GPIO44, GPIO17 ~ GPIO18|
-| External SPI   |  3           | 3      | SDI, SDO, SCK                            |
+| External SPI   |  2           | 1      | SDI, SDO, SCK                            |
 | I2C            |  2           | 0      | SDA, SDL                           |
 | GPIO           |  2           | 2      | *                              |
 | ADC            |  19           | 0      | ADC                           |
 | PWM            |  3           | 0      | *                              |
-| ICSP           |  3          | 3      | MOSI, MISO, SCK                         |
+| ICSP           |  3          | 3      | DAT, SCK, MCLR                         |
 
 #### MPLabX (No Error & MCC / Melody Support)
 
