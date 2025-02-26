@@ -9,7 +9,7 @@ tags:
 
 ![](https://github.com/NBrentASU/NBrent/blob/main/SchematicPNG.png?raw=true)
 
-[Link to Actuator Schematic PDF]()
+[Link to Actuator Schematic PDF](https://github.com/NBrentASU/NBrent/blob/main/ActuatorSchV2.pdf)
 
 [Link to Actuator Schematic Altium File](https://github.com/NBrentASU/NBrent/blob/main/Individual_Subsystem%20(2-26-2025%208-36-59%20AM).zip)
 
