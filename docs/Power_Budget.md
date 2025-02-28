@@ -9,7 +9,7 @@ Below is all of the components within my system that will draw current.
 
 ![](https://github.com/NBrentASU/NBrent/blob/main/PBV21.png?raw=true)
 
-Below is the total current requirements for the components on the 3.3V and 7V rails with a safety margin of 25%.
+Below is the total current requirements for the components on the 3.3V and 9V rails with a safety margin of 25%.
 
 ![](https://github.com/NBrentASU/NBrent/blob/main/PBV22.png?raw=true)
 
