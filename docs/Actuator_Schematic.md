@@ -1,5 +1,5 @@
 ---
-title: Schematic
+title: Actuator Schematic
 tags:
 - tag1
 - tag2
@@ -7,11 +7,11 @@ tags:
 
 ## Schematic
 
-![](https://github.com/NBrentASU/NBrent/blob/main/SchematicPNG.png?raw=true)
+![](https://github.com/NBrentASU/NBrent/blob/main/SchV3PNG.png?raw=true)
 
-[Link to Actuator Schematic PDF](https://github.com/NBrentASU/NBrent/blob/main/ActuatorSchV2.pdf)
+[Link to Actuator Schematic PDF](https://github.com/NBrentASU/NBrent/blob/main/ActuatorSchV3.pdf)
 
-[Link to Actuator Schematic Altium File](https://github.com/NBrentASU/NBrent/blob/main/Individual_Subsystem%20(2-26-2025%208-36-59%20AM).zip)
+[Link to Actuator Schematic Altium File](https://github.com/NBrentASU/NBrent/blob/main/Individual_Subsystem%20(2-28-2025%203-27-11%20PM).zip)
 
 Above is the schematic of the actuator subsystem in Altium. The PIC microcontroller is a custom-made symbol due to importing issues, all other components come from Digikey or the built-in manufacturer part search. Altium was chosen as the platform due to its online-sharing capabilities as well as the built-in library. 
 
