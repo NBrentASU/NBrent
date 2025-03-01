@@ -5,7 +5,9 @@ tags:
 - tag2
 ---
 
-[](https://github.com/NBrentASU/NBrent/blob/main/ActBOM.png?raw=true)
+## Bill of Materials
+
+![](https://github.com/NBrentASU/NBrent/blob/main/ActBOM.png?raw=true)
 
 [Link to Actuator BOM](https://docs.google.com/spreadsheets/d/1FJN0XrUf_AvCUI4GFHaa-Mji08fVkqqb/edit?usp=sharing&ouid=111924718376130236743&rtpof=true&sd=true)
 
