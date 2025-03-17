@@ -93,7 +93,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#recieved-messages" class="md-skip">
+        <a href="#team-definitions" class="md-skip">
           Skip to content
         </a>
       
@@ -472,6 +472,33 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#team-definitions" class="md-nav__link">
+    Team Definitions
+  </a>
+  
+    <nav class="md-nav" aria-label="Team Definitions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#team-bytes" class="md-nav__link">
+    Team Bytes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#team-addresses" class="md-nav__link">
+    Team Addresses
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#recieved-messages" class="md-nav__link">
     Recieved Messages
   </a>
@@ -487,8 +514,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#message-type-15-send-speed-setting" class="md-nav__link">
-    Message Type 15 (Send Speed Setting)
+  <a href="#message-type-15-speed-setting-from-hmi" class="md-nav__link">
+    Message Type 15 (Speed Setting from HMI)
   </a>
   
 </li>
@@ -507,8 +534,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#message-type-8-magnet-info" class="md-nav__link">
-    Message Type 8 (Magnet Info)
+  <a href="#message-type-8-switchings-per-second" class="md-nav__link">
+    Message Type 8 (Switchings Per Second)
   </a>
   
 </li>
@@ -529,6 +556,13 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-handling" class="md-nav__link">
+    Code Handling
+  </a>
   
 </li>
       
@@ -722,6 +756,33 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#team-definitions" class="md-nav__link">
+    Team Definitions
+  </a>
+  
+    <nav class="md-nav" aria-label="Team Definitions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#team-bytes" class="md-nav__link">
+    Team Bytes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#team-addresses" class="md-nav__link">
+    Team Addresses
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#recieved-messages" class="md-nav__link">
     Recieved Messages
   </a>
@@ -737,8 +798,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#message-type-15-send-speed-setting" class="md-nav__link">
-    Message Type 15 (Send Speed Setting)
+  <a href="#message-type-15-speed-setting-from-hmi" class="md-nav__link">
+    Message Type 15 (Speed Setting from HMI)
   </a>
   
 </li>
@@ -757,8 +818,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#message-type-8-magnet-info" class="md-nav__link">
-    Message Type 8 (Magnet Info)
+  <a href="#message-type-8-switchings-per-second" class="md-nav__link">
+    Message Type 8 (Switchings Per Second)
   </a>
   
 </li>
@@ -779,6 +840,13 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-handling" class="md-nav__link">
+    Code Handling
+  </a>
   
 </li>
       
@@ -807,6 +875,53 @@
 
   <h1>Actuator API</h1>
 
+<h2 id="team-definitions">Team Definitions</h2>
+<h3 id="team-bytes">Team Bytes</h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Byte</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Start</td>
+<td></td>
+</tr>
+<tr>
+<td>Stop</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="team-addresses">Team Addresses</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Address</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Noah Brent</td>
+<td>N</td>
+</tr>
+<tr>
+<td>Evan Skinner</td>
+<td>E</td>
+</tr>
+<tr>
+<td>Kirk Volin</td>
+<td>K</td>
+</tr>
+<tr>
+<td>Hunter Hassebroek</td>
+<td>H</td>
+</tr>
+</tbody>
+</table>
 <h2 id="recieved-messages">Recieved Messages</h2>
 <h3 id="message-type-7-start-communication">Message Type 7 (Start Communication)</h3>
 <table>
@@ -835,11 +950,11 @@
 </tr>
 <tr>
 <td>Example</td>
-<td>1</td>
+<td>1 (Start)</td>
 </tr>
 </tbody>
 </table>
-<h3 id="message-type-15-send-speed-setting">Message Type 15 (Send Speed Setting)</h3>
+<h3 id="message-type-15-speed-setting-from-hmi">Message Type 15 (Speed Setting from HMI)</h3>
 <table>
 <thead>
 <tr>
@@ -866,31 +981,28 @@
 </tr>
 <tr>
 <td>Example</td>
-<td>2</td>
+<td>2 (Medium Speed)</td>
 </tr>
 </tbody>
 </table>
 <h2 id="sent-messages">Sent Messages</h2>
-<h3 id="message-type-8-magnet-info">Message Type 8 (Magnet Info)</h3>
+<h3 id="message-type-8-switchings-per-second">Message Type 8 (Switchings Per Second)</h3>
 <table>
 <thead>
 <tr>
 <th></th>
 <th>Byte 1</th>
 <th>Byte 2</th>
-<th>Byte 3</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Message</td>
-<td>Switching #</td>
-<td>Time Triggered (Whole #)</td>
-<td>Time triggered (Decimal)</td>
+<td># of Switchings</td>
+<td>Time Since Last Triggered</td>
 </tr>
 <tr>
 <td>Variable Type</td>
-<td>uint8_t</td>
 <td>uint8_t</td>
 <td>uint8_t</td>
 </tr>
@@ -898,19 +1010,16 @@
 <td>Min</td>
 <td>0</td>
 <td>0</td>
-<td>0</td>
 </tr>
 <tr>
 <td>Max</td>
 <td>255</td>
-<td>255</td>
-<td>255</td>
+<td>100</td>
 </tr>
 <tr>
 <td>Example</td>
-<td>34</td>
-<td>24</td>
-<td>55</td>
+<td>12</td>
+<td>24 (24 milliseconds)</td>
 </tr>
 </tbody>
 </table>
@@ -926,8 +1035,8 @@
 <tbody>
 <tr>
 <td>Message</td>
-<td></td>
-<td></td>
+<td>Error Type</td>
+<td>Address Received</td>
 </tr>
 <tr>
 <td>Variable Type</td>
@@ -936,21 +1045,28 @@
 </tr>
 <tr>
 <td>Min</td>
-<td></td>
-<td></td>
+<td>0</td>
+<td>Z (Null Letter)</td>
 </tr>
 <tr>
 <td>Max</td>
-<td></td>
-<td></td>
+<td>9</td>
+<td>Address of Error</td>
 </tr>
 <tr>
 <td>Example</td>
-<td></td>
-<td></td>
+<td>2</td>
+<td>E</td>
 </tr>
 </tbody>
 </table>
+<p>Error Types:</p>
+<p>0: Incorrect / No Start Bit
+1: Incorrect / No Address Bit
+2: Incorrect / No Message Type
+3: Incorrect / No Stop Bit
+4: Incorrect Data Value in Valid Message
+5: Bytes per Message Overflow</p>
 <h3 id="message-type-10-reset">Message Type 10 (Reset)</h3>
 <table>
 <thead>
@@ -978,10 +1094,11 @@
 </tr>
 <tr>
 <td>Example</td>
-<td>1</td>
+<td>1 (Reset)</td>
 </tr>
 </tbody>
 </table>
+<h2 id="code-handling">Code Handling</h2>
 
 
 
