@@ -486,6 +486,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#message-type-15-send-speed-setting" class="md-nav__link">
+    Message Type 15 (Send Speed Setting)
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -729,6 +736,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#message-type-15-send-speed-setting" class="md-nav__link">
+    Message Type 15 (Send Speed Setting)
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -800,34 +814,59 @@
 <tr>
 <th></th>
 <th>Byte 1</th>
-<th>Byte 2</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Message</td>
-<td></td>
 <td>StartCommand</td>
 </tr>
 <tr>
 <td>Variable Type</td>
 <td>uint8_t</td>
-<td>uint8_t</td>
 </tr>
 <tr>
 <td>Min</td>
-<td></td>
 <td>0</td>
 </tr>
 <tr>
 <td>Max</td>
-<td></td>
 <td>1</td>
 </tr>
 <tr>
 <td>Example</td>
-<td></td>
-<td></td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<h3 id="message-type-15-send-speed-setting">Message Type 15 (Send Speed Setting)</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Byte 1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Message</td>
+<td>Speed Setting</td>
+</tr>
+<tr>
+<td>Variable Type</td>
+<td>uint8_t</td>
+</tr>
+<tr>
+<td>Min</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Max</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Example</td>
+<td>2</td>
 </tr>
 </tbody>
 </table>
@@ -839,33 +878,39 @@
 <th></th>
 <th>Byte 1</th>
 <th>Byte 2</th>
+<th>Byte 3</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Message</td>
-<td></td>
-<td></td>
+<td>Switching #</td>
+<td>Time Triggered (Whole #)</td>
+<td>Time triggered (Decimal)</td>
 </tr>
 <tr>
 <td>Variable Type</td>
 <td>uint8_t</td>
 <td>uint8_t</td>
+<td>uint8_t</td>
 </tr>
 <tr>
 <td>Min</td>
-<td></td>
-<td></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
 </tr>
 <tr>
 <td>Max</td>
-<td></td>
-<td></td>
+<td>255</td>
+<td>255</td>
+<td>255</td>
 </tr>
 <tr>
 <td>Example</td>
-<td></td>
-<td></td>
+<td>34</td>
+<td>24</td>
+<td>55</td>
 </tr>
 </tbody>
 </table>
@@ -912,34 +957,28 @@
 <tr>
 <th></th>
 <th>Byte 1</th>
-<th>Byte 2</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Message</td>
-<td></td>
-<td></td>
+<td>Reset of Actuator System</td>
 </tr>
 <tr>
 <td>Variable Type</td>
 <td>uint8_t</td>
-<td>uint8_t</td>
 </tr>
 <tr>
 <td>Min</td>
-<td></td>
-<td></td>
+<td>0</td>
 </tr>
 <tr>
 <td>Max</td>
-<td></td>
-<td></td>
+<td>1</td>
 </tr>
 <tr>
 <td>Example</td>
-<td></td>
-<td></td>
+<td>1</td>
 </tr>
 </tbody>
 </table>
