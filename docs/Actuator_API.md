@@ -11,8 +11,8 @@ tags:
 
 | Type |  Byte  |
 | -----------| ----------- |
-| Start |   |
-| Stop |  |
+| Start | AZ  |
+| Stop | YB |
 
 ### Team Addresses
 
@@ -22,6 +22,7 @@ tags:
 |Evan Skinner| E |
 |Kirk Volin| K |
 |Hunter Hassebroek| H |
+| Broadcast | X |
 
 ## Recieved Messages
 
@@ -63,7 +64,7 @@ tags:
 | -----------| ----------- | ----------- |
 |Message| Error Type | Address Received |
 |Variable Type| uint8_t  | uint8_t  |
-|Min| 0  | Z (Null Letter) |
+|Min| 0  | Z (No error address) |
 |Max| 9 | Address of Error  |
 |Example| 2  | E  |
 
