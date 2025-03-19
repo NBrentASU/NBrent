@@ -26,16 +26,6 @@ tags:
 
 ## Recieved Messages
 
-### Message Type 7 (Start Communication)
-
-|  |  Byte 1     |
-| -----------| ----------- |
-|Message| StartCommand  |
-|Variable Type| uint8_t  |
-|Min| 0 |
-|Max| 1 |
-|Example| 1 (Start)|
-
 ### Message Type 15 (Speed Setting from HMI)
 
 |  |  Byte 1     |
@@ -56,7 +46,7 @@ tags:
 |Variable Type| uint8_t  | uint8_t  |
 |Min| 0 | 0 |
 |Max| 255 | 100  |
-|Example| 12 | 24 (24 milliseconds) |
+|Example| 12 | 24 (24 hundreths of a second) |
 
 ### Message Type 9 (Error)
 
