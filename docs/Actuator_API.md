@@ -113,3 +113,18 @@ When Actuator Subsystem receives a message, the following is the protocol for ha
 7. Continue from step one when receiving a new message
 
 For each step, there will be an error check to confirm the message is valid. Should it fail, the error code and address it was sent from will be transmitted.
+
+Should characters be sent outside of start or stop bits, they are ignored and trashed.
+
+To elaborate on step 6 and error handling
+
+1. Whenever an interruptive event occurs (ie switching info every second, error, or reset) begin contruction of message in array
+2. To a temporary array, begin by adding start bytes and my address byte
+3. Then add receiving address which in most cases will be MQTT, HMI, or broadcast
+4. Add message type byte based on messaging protocols above
+5. Complete message by adding data then capping with stop bytes
+6. Check if already transmitting, if so wait for transmission to end and delay then send
+7. Otherwise send
+8. Trash temporary sending array
+
+A group sending schedule may be implemented to improve message success rates and ensure minimal message loss.
