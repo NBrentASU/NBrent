@@ -1138,6 +1138,19 @@ Stop Byte (2 8uint_t)</p>
 <li>Continue from step one when receiving a new message</li>
 </ol>
 <p>For each step, there will be an error check to confirm the message is valid. Should it fail, the error code and address it was sent from will be transmitted.</p>
+<p>Should characters be sent outside of start or stop bits, they are ignored and trashed.</p>
+<p>To elaborate on step 6 and error handling</p>
+<ol>
+<li>Whenever an interruptive event occurs (ie switching info every second, error, or reset) begin contruction of message in array</li>
+<li>To a temporary array, begin by adding start bytes and my address byte</li>
+<li>Then add receiving address which in most cases will be MQTT, HMI, or broadcast</li>
+<li>Add message type byte based on messaging protocols above</li>
+<li>Complete message by adding data then capping with stop bytes</li>
+<li>Check if already transmitting, if so wait for transmission to end and delay then send</li>
+<li>Otherwise send</li>
+<li>Trash temporary sending array</li>
+</ol>
+<p>A group sending schedule may be implemented to improve message success rates and ensure minimal message loss.</p>
 
 
 
