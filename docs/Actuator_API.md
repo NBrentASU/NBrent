@@ -5,6 +5,15 @@ tags:
 - tag2
 ---
 
+## Message Structure
+
+Start Byte (2 8uint_t)
+Sender Address (8uint_t)
+Receiver Address (8uint_t)
+Message Type (uint8_t)
+Message (1-56 8uint_t)
+Stop Byte (2 8uint_t)
+
 ## Team Definitions
 
 ### Team Bytes
@@ -26,7 +35,7 @@ tags:
 
 ## Recieved Messages
 
-### Message Type 14
+### Message Type 14 (Master Clear)
 
 |  |  Byte 1     |
 | -----------| ----------- |
@@ -76,6 +85,10 @@ Error Types:
 3: Incorrect / No Stop Bit
 4: Incorrect Data Value in Valid Message
 5: Bytes per Message Overflow
+6:
+7:
+8:
+9:
 
 ### Message Type 10 (Reset)
 
@@ -89,3 +102,15 @@ Error Types:
 
 ## Code Handling
 
+When Actuator Subsystem receives a message, the following is the protocol for handling:
+
+1. Identify start and begin copying it to array for retransmission
+2. When Receiver Byte is identified, check if mine or broadcast
+    2a. If not mine, finish copying to retransmission array then retransmit
+    2b. If mine, continue to step 3
+    2c. If broadcast byte, copy to retransmit array, retransmit, and continue to step 3
+3. Identify Message Type
+
+
+
+For each step, should there be  
