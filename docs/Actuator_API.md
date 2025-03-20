@@ -35,15 +35,15 @@ Stop Byte (2 8uint_t)
 
 ## Recieved Messages
 
-### Message Type 14 (Master Clear)
+### Message Type 14 (Master Reset)
 
 |  |  Byte 1     |
 | -----------| ----------- |
-|Message| Speed Setting  |
-|Variable Type| uint8_t  |
-|Min|  1 |
-|Max|  3 |
-|Example| 2 (Medium Speed)|
+|Message| Master Reset  |
+|Variable Type| char  |
+|Min| RST |
+|Max| RST |
+|Example| RST |
 
 ### Message Type 15 (Speed Setting from HMI)
 
@@ -72,7 +72,7 @@ Stop Byte (2 8uint_t)
 |  |  Byte 1     |  Byte 2   |
 | -----------| ----------- | ----------- |
 |Message| Error Type | Address Received |
-|Variable Type| uint8_t  | uint8_t  |
+|Variable Type| uint8_t  | char |
 |Min| 0  | Z (No error address) |
 |Max| 9 | Address of Error  |
 |Example| 2  | E  |
