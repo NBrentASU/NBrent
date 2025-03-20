@@ -93,7 +93,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#team-definitions" class="md-skip">
+        <a href="#message-structure" class="md-skip">
           Skip to content
         </a>
       
@@ -472,6 +472,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#message-structure" class="md-nav__link">
+    Message Structure
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#team-definitions" class="md-nav__link">
     Team Definitions
   </a>
@@ -505,6 +512,13 @@
   
     <nav class="md-nav" aria-label="Recieved Messages">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#message-type-14-master-reset" class="md-nav__link">
+    Message Type 14 (Master Reset)
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#message-type-15-speed-setting-from-hmi" class="md-nav__link">
@@ -749,6 +763,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#message-structure" class="md-nav__link">
+    Message Structure
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#team-definitions" class="md-nav__link">
     Team Definitions
   </a>
@@ -782,6 +803,13 @@
   
     <nav class="md-nav" aria-label="Recieved Messages">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#message-type-14-master-reset" class="md-nav__link">
+    Message Type 14 (Master Reset)
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#message-type-15-speed-setting-from-hmi" class="md-nav__link">
@@ -861,6 +889,13 @@
 
   <h1>Actuator API</h1>
 
+<h2 id="message-structure">Message Structure</h2>
+<p>Start Byte (2 8uint_t)
+Sender Address (8uint_t)
+Receiver Address (8uint_t)
+Message Type (uint8_t)
+Message (1-56 8uint_t)
+Stop Byte (2 8uint_t)</p>
 <h2 id="team-definitions">Team Definitions</h2>
 <h3 id="team-bytes">Team Bytes</h3>
 <table>
@@ -913,6 +948,37 @@
 </tbody>
 </table>
 <h2 id="recieved-messages">Recieved Messages</h2>
+<h3 id="message-type-14-master-reset">Message Type 14 (Master Reset)</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Byte 1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Message</td>
+<td>Master Reset</td>
+</tr>
+<tr>
+<td>Variable Type</td>
+<td>char</td>
+</tr>
+<tr>
+<td>Min</td>
+<td>RST</td>
+</tr>
+<tr>
+<td>Max</td>
+<td>RST</td>
+</tr>
+<tr>
+<td>Example</td>
+<td>RST</td>
+</tr>
+</tbody>
+</table>
 <h3 id="message-type-15-speed-setting-from-hmi">Message Type 15 (Speed Setting from HMI)</h3>
 <table>
 <thead>
@@ -1000,7 +1066,7 @@
 <tr>
 <td>Variable Type</td>
 <td>uint8_t</td>
-<td>uint8_t</td>
+<td>char</td>
 </tr>
 <tr>
 <td>Min</td>
@@ -1025,7 +1091,11 @@
 2: Incorrect / No Message Type
 3: Incorrect / No Stop Bit
 4: Incorrect Data Value in Valid Message
-5: Bytes per Message Overflow</p>
+5: Bytes per Message Overflow
+6:
+7:
+8:
+9:</p>
 <h3 id="message-type-10-reset">Message Type 10 (Reset)</h3>
 <table>
 <thead>
@@ -1058,6 +1128,16 @@
 </tbody>
 </table>
 <h2 id="code-handling">Code Handling</h2>
+<p>When Actuator Subsystem receives a message, the following is the protocol for handling:</p>
+<ol>
+<li>Identify start and begin copying it to array for retransmission</li>
+<li>When Receiver Byte is identified, check if mine or broadcast
+    2a. If not mine, finish copying to retransmission array then retransmit
+    2b. If mine, continue to step 3
+    2c. If broadcast byte, copy to retransmit array, retransmit, and continue to step 3</li>
+<li>Identify Message Type</li>
+</ol>
+<p>For each step, should there be  </p>
 
 
 
