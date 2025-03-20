@@ -74,7 +74,7 @@ Stop Byte (2 8uint_t)
 |Message| Error Type | Address Received |
 |Variable Type| uint8_t  | char |
 |Min| 0  | Z (No error address) |
-|Max| 9 | Address of Error  |
+|Max| 5 | Address of Error  |
 |Example| 2  | E  |
 
 Error Types:
@@ -85,10 +85,7 @@ Error Types:
 3: Incorrect / No Stop Bit
 4: Incorrect Data Value in Valid Message
 5: Bytes per Message Overflow
-6:
-7:
-8:
-9:
+
 
 ### Message Type 10 (Reset)
 
@@ -110,7 +107,9 @@ When Actuator Subsystem receives a message, the following is the protocol for ha
     2b. If mine, continue to step 3
     2c. If broadcast byte, copy to retransmit array, retransmit, and continue to step 3
 3. Identify Message Type
+4. Utilize message information
+5. Trash Message
+6. Transmit relevant data
+7. Continue from step one when receiving a new message
 
-
-
-For each step, should there be  
+For each step, there will be an error check to confirm the message is valid. Should it fail, the error code and address it was sent from will be transmitted.
