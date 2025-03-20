@@ -26,6 +26,16 @@ tags:
 
 ## Recieved Messages
 
+### Message Type 14
+
+|  |  Byte 1     |
+| -----------| ----------- |
+|Message| Speed Setting  |
+|Variable Type| uint8_t  |
+|Min|  1 |
+|Max|  3 |
+|Example| 2 (Medium Speed)|
+
 ### Message Type 15 (Speed Setting from HMI)
 
 |  |  Byte 1     |
