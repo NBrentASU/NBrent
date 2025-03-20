@@ -1075,7 +1075,7 @@ Stop Byte (2 8uint_t)</p>
 </tr>
 <tr>
 <td>Max</td>
-<td>9</td>
+<td>5</td>
 <td>Address of Error</td>
 </tr>
 <tr>
@@ -1091,11 +1091,7 @@ Stop Byte (2 8uint_t)</p>
 2: Incorrect / No Message Type
 3: Incorrect / No Stop Bit
 4: Incorrect Data Value in Valid Message
-5: Bytes per Message Overflow
-6:
-7:
-8:
-9:</p>
+5: Bytes per Message Overflow</p>
 <h3 id="message-type-10-reset">Message Type 10 (Reset)</h3>
 <table>
 <thead>
@@ -1136,8 +1132,12 @@ Stop Byte (2 8uint_t)</p>
     2b. If mine, continue to step 3
     2c. If broadcast byte, copy to retransmit array, retransmit, and continue to step 3</li>
 <li>Identify Message Type</li>
+<li>Utilize message information</li>
+<li>Trash Message</li>
+<li>Transmit relevant data</li>
+<li>Continue from step one when receiving a new message</li>
 </ol>
-<p>For each step, should there be  </p>
+<p>For each step, there will be an error check to confirm the message is valid. Should it fail, the error code and address it was sent from will be transmitted.</p>
 
 
 
