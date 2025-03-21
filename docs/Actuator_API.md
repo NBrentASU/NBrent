@@ -86,7 +86,6 @@ Error Types:
 4: Incorrect Data Value in Valid Message
 5: Bytes per Message Overflow
 
-
 ### Message Type 10 (Reset)
 
 |  |  Byte 1     |
@@ -98,6 +97,8 @@ Error Types:
 |Example| 1 (Reset)|
 
 ## Code Handling
+
+Priority is placed on retransmitting incoming data before transmitting personal data as the outgoing Actuator data is not time sensitive(other than errors).
 
 When Actuator Subsystem receives a message, the following is the protocol for handling:
 
