@@ -8,10 +8,15 @@ tags:
 ## Message Structure
 
 Start Byte (2 8uint_t)
+
 Sender Address (8uint_t)
+
 Receiver Address (8uint_t)
+
 Message Type (uint8_t)
+
 Message (1-56 8uint_t)
+
 Stop Byte (2 8uint_t)
 
 ## Team Definitions
