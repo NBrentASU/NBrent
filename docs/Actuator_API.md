@@ -7,17 +7,17 @@ tags:
 
 ## Message Structure
 
-Start Byte (2 8uint_t)
+Start Byte (2 uint8_t)
 
-Sender Address (8uint_t)
+Sender Address (uint8_t)
 
-Receiver Address (8uint_t)
+Receiver Address (uint8_t)
 
 Message Type (uint8_t)
 
-Message (1-56 8uint_t)
+Message (1-56 uint8_t)
 
-Stop Byte (2 8uint_t)
+Stop Byte (2 uint8_t)
 
 ## Team Definitions
 
