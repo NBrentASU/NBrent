@@ -80,10 +80,15 @@ Stop Byte (2 8uint_t)
 Error Types:
 
 0: Incorrect / No Start Bit
+
 1: Incorrect / No Address Bit
+
 2: Incorrect / No Message Type
+
 3: Incorrect / No Stop Bit
+
 4: Incorrect Data Value in Valid Message
+
 5: Bytes per Message Overflow
 
 ### Message Type 10 (Reset)
