@@ -1124,6 +1124,7 @@ Stop Byte (2 8uint_t)</p>
 </tbody>
 </table>
 <h2 id="code-handling">Code Handling</h2>
+<p>Priority is placed on retransmitting incoming data before transmitting personal data as the outgoing Actuator data is not time sensitive(other than errors).</p>
 <p>When Actuator Subsystem receives a message, the following is the protocol for handling:</p>
 <ol>
 <li>Identify start and begin copying it to array for retransmission</li>
