@@ -1128,11 +1128,15 @@
 <p>When Actuator Subsystem receives a message, the following is the protocol for handling:</p>
 <ol>
 <li>Identify start and begin copying it to array for retransmission</li>
-<li>When Receiver Byte is identified, check if mine or broadcast
-    2a. If not mine, finish copying to retransmission array then retransmit
-    2b. If mine, continue to step 3
-    2c. If broadcast byte, copy to retransmit array, retransmit, and continue to step 3</li>
-<li>Identify Message Type</li>
+<li>
+<p>When Receiver Byte is identified, check if mine or broadcast</p>
+<p>2a. If not mine, finish copying to retransmission array then retransmit</p>
+<p>2b. If mine, continue to step 3</p>
+<p>2c. If broadcast byte, copy to retransmit array, retransmit, and continue to step 3</p>
+</li>
+<li>
+<p>Identify Message Type</p>
+</li>
 <li>Utilize message information</li>
 <li>Trash Message</li>
 <li>Transmit relevant data</li>
