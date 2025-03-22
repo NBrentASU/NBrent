@@ -114,9 +114,13 @@ When Actuator Subsystem receives a message, the following is the protocol for ha
 
 1. Identify start and begin copying it to array for retransmission
 2. When Receiver Byte is identified, check if mine or broadcast
+
     2a. If not mine, finish copying to retransmission array then retransmit
+
     2b. If mine, continue to step 3
+
     2c. If broadcast byte, copy to retransmit array, retransmit, and continue to step 3
+    
 3. Identify Message Type
 4. Utilize message information
 5. Trash Message
