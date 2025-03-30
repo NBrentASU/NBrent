@@ -7,6 +7,12 @@ tags:
 
 ## Actuator PCB Design
 
-![](?raw=true)
+![Front of PCB](https://github.com/NBrentASU/NBrent/blob/main/FrontPCB.png?raw=true)
+
+![Back of PCB](https://github.com/NBrentASU/NBrent/blob/main/BackPCB.png?raw=true)
 
 Above is the actuator PCB design
+
+![](https://github.com/NBrentASU/NBrent/blob/main/PCBIRL.jpg?raw=true)
+
+Above this image are the manufactured boards received from JLCPCB before and after soldering. Currently not debugged so additional hardware may be added to fix errors in design or manufacturing

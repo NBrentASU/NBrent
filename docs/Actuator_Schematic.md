@@ -7,7 +7,7 @@ tags:
 
 ## Schematic
 
-![](https://github.com/NBrentASU/NBrent/blob/main/SchV3PNG.png?raw=true)
+![](https://github.com/NBrentASU/NBrent/blob/main/SCHFinalSnip.png?raw=true)
 
 [Link to Actuator Schematic PDF](https://github.com/NBrentASU/NBrent/blob/main/SchFinal.pdf)
 
