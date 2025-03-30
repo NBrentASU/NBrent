@@ -77,20 +77,18 @@ Stop Byte (2 uint8_t)
 |  |  Byte 1     | 
 | -----------| ----------- | 
 |Message| Error Type |
-|Variable Type| uint8_t  |
-|Min| 0  | |
+|Variable Type| char | uint8_t  |
+|Min| 1  | 
 |Max| 5 | 
 |Example| 2  |
 
 Error Types:
 
-0: Incorrect / No Start Bit
+1: Incorrect / No Start Bit
 
-1: Incorrect / No Address Bit
+2: Incorrect / No Address Bit
 
-2: Incorrect / No Message Type
-
-3: Incorrect / No Stop Bit
+3: Incorrect / No Message Type
 
 4: Incorrect Data Value in Valid Message
 
