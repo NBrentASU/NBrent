@@ -963,19 +963,19 @@
 </tr>
 <tr>
 <td>Variable Type</td>
-<td>char</td>
+<td>uint8_t</td>
 </tr>
 <tr>
 <td>Min</td>
-<td>RST</td>
+<td>1</td>
 </tr>
 <tr>
 <td>Max</td>
-<td>RST</td>
+<td>1</td>
 </tr>
 <tr>
 <td>Example</td>
-<td>RST</td>
+<td>1</td>
 </tr>
 </tbody>
 </table>
@@ -1054,34 +1054,28 @@
 <tr>
 <th></th>
 <th>Byte 1</th>
-<th>Byte 2</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Message</td>
 <td>Error Type</td>
-<td>Address Received</td>
 </tr>
 <tr>
 <td>Variable Type</td>
 <td>uint8_t</td>
-<td>char</td>
 </tr>
 <tr>
 <td>Min</td>
 <td>0</td>
-<td>Z (No error address)</td>
 </tr>
 <tr>
 <td>Max</td>
 <td>5</td>
-<td>Address of Error</td>
 </tr>
 <tr>
 <td>Example</td>
 <td>2</td>
-<td>E</td>
 </tr>
 </tbody>
 </table>
@@ -1124,36 +1118,41 @@
 </tbody>
 </table>
 <h2 id="code-handling">Code Handling</h2>
-<p>Priority is placed on retransmitting incoming data before transmitting personal data as the outgoing Actuator data is not time sensitive(other than errors).</p>
+<p>Priority is placed on retransmitting incoming data before transmitting personal data as the outgoing Actuator data is not time sensitive (other than errors).</p>
 <p>When Actuator Subsystem receives a message, the following is the protocol for handling:</p>
 <ol>
 <li>Identify start and begin copying it to array for retransmission</li>
+<li>After message is copied to array, check begin error check</li>
 <li>
-<p>When Receiver Byte is identified, check if mine or broadcast</p>
-<p>2a. If not mine, finish copying to retransmission array then retransmit</p>
-<p>2b. If mine, continue to step 3</p>
-<p>2c. If broadcast byte, copy to retransmit array, retransmit, and continue to step 3</p>
+<p>When no errors for bytes 1-3, check receiver address:</p>
+<p>3a. If not mine, retransmit</p>
+<p>3b. If mine, continue to step 3</p>
+<p>3c. If broadcast byte, retransmit message, and continue to step 4</p>
 </li>
 <li>
-<p>Identify Message Type</p>
+<p>Utilize message information</p>
 </li>
-<li>Utilize message information</li>
-<li>Trash Message</li>
-<li>Transmit relevant data</li>
+<li>Trash Message (Done automatically when next message is received)</li>
+<li>Transmit relevant data when not transmitting priority data</li>
 <li>Continue from step one when receiving a new message</li>
 </ol>
 <p>For each step, there will be an error check to confirm the message is valid. Should it fail, the error code and address it was sent from will be transmitted.</p>
 <p>Should characters be sent outside of start or stop bits, they are ignored and trashed.</p>
 <p>To elaborate on step 6 and error handling</p>
 <ol>
-<li>Whenever an interruptive event occurs (ie switching info every second, error, or reset) begin contruction of message in array</li>
-<li>To a temporary array, begin by adding start bytes and my address byte</li>
-<li>Then add receiving address which in most cases will be MQTT, HMI, or broadcast</li>
-<li>Add message type byte based on messaging protocols above</li>
-<li>Complete message by adding data then capping with stop bytes</li>
+<li>Whenever an interruptive event occurs (ie  error or reset) identify and redirect to appropriate function</li>
+<li></li>
+<li></li>
 <li>Check if already transmitting, if so wait for transmission to end and delay then send</li>
 <li>Otherwise send</li>
-<li>Trash temporary sending array</li>
+<li>
+<p>If error:</p>
+<p>8a. When mine, sends hardcoded error to MQTT
+8b. If other error, retransmitted as normal</p>
+</li>
+<li>
+<p>If reset message, halt system and retransmit to MQTT</p>
+</li>
 </ol>
 <p>A group sending schedule may be implemented to improve message success rates and ensure minimal message loss.</p>
 
