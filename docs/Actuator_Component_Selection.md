@@ -1,5 +1,5 @@
 ---
-title: Individual Component Selection
+title: Actuator Component Selection
 ---
 
 ## Component Selection - Actuator Subsystem

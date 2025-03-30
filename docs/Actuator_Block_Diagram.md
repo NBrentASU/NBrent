@@ -1,5 +1,5 @@
 ---
-title: Individual Block Diagram
+title: Actuator Block Diagram
 tags:
 - tag1
 - tag2
