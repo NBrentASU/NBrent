@@ -45,10 +45,10 @@ Stop Byte (2 uint8_t)
 |  |  Byte 1     |
 | -----------| ----------- |
 |Message| Master Reset  |
-|Variable Type| char  |
-|Min| RST |
-|Max| RST |
-|Example| RST |
+|Variable Type| uint8_t |
+|Min| 1 |
+|Max| 1 |
+|Example| 1 |
 
 ### Message Type 15 (Speed Setting from HMI)
 
@@ -74,13 +74,13 @@ Stop Byte (2 uint8_t)
 
 ### Message Type 9 (Error)
 
-|  |  Byte 1     |  Byte 2   |
-| -----------| ----------- | ----------- |
-|Message| Error Type | Address Received |
-|Variable Type| uint8_t  | char |
-|Min| 0  | Z (No error address) |
-|Max| 5 | Address of Error  |
-|Example| 2  | E  |
+|  |  Byte 1     | 
+| -----------| ----------- | 
+|Message| Error Type |
+|Variable Type| uint8_t  |
+|Min| 0  | |
+|Max| 5 | 
+|Example| 2  |
 
 Error Types:
 
@@ -108,23 +108,23 @@ Error Types:
 
 ## Code Handling
 
-Priority is placed on retransmitting incoming data before transmitting personal data as the outgoing Actuator data is not time sensitive(other than errors).
+Priority is placed on retransmitting incoming data before transmitting personal data as the outgoing Actuator data is not time sensitive (other than errors).
 
 When Actuator Subsystem receives a message, the following is the protocol for handling:
 
 1. Identify start and begin copying it to array for retransmission
-2. When Receiver Byte is identified, check if mine or broadcast
+2. After message is copied to array, check begin error check
+3. When no errors for bytes 1-3, check receiver address:
 
-    2a. If not mine, finish copying to retransmission array then retransmit
+    3a. If not mine, retransmit
 
-    2b. If mine, continue to step 3
+    3b. If mine, continue to step 3
 
-    2c. If broadcast byte, copy to retransmit array, retransmit, and continue to step 3
+    3c. If broadcast byte, retransmit message, and continue to step 4
     
-3. Identify Message Type
 4. Utilize message information
-5. Trash Message
-6. Transmit relevant data
+5. Trash Message (Done automatically when next message is received)
+6. Transmit relevant data when not transmitting priority data
 7. Continue from step one when receiving a new message
 
 For each step, there will be an error check to confirm the message is valid. Should it fail, the error code and address it was sent from will be transmitted.
@@ -133,13 +133,16 @@ Should characters be sent outside of start or stop bits, they are ignored and tr
 
 To elaborate on step 6 and error handling
 
-1. Whenever an interruptive event occurs (ie switching info every second, error, or reset) begin contruction of message in array
-2. To a temporary array, begin by adding start bytes and my address byte
-3. Then add receiving address which in most cases will be MQTT, HMI, or broadcast
-4. Add message type byte based on messaging protocols above
-5. Complete message by adding data then capping with stop bytes
+1. Whenever an interruptive event occurs (ie  error or reset) identify and redirect to appropriate function
+2. 
+5. 
 6. Check if already transmitting, if so wait for transmission to end and delay then send
 7. Otherwise send
-8. Trash temporary sending array
+8. If error:
+
+    8a. When mine, sends hardcoded error to MQTT
+    8b. If other error, retransmitted as normal
+
+9. If reset message, halt system and retransmit to MQTT
 
 A group sending schedule may be implemented to improve message success rates and ensure minimal message loss.
