@@ -7,7 +7,7 @@ tags:
 
 ## Subsystem: Actuator
 
-![Block Diagram](https://github.com/NBrentASU/NBrent/blob/main/BlockDiaActu.PNG?raw=true)
+![Block Diagram](https://github.com/NBrentASU/NBrent/blob/main/BlockDiagramFinal.drawio.png?raw=true)
 
 Link to [Actuator Block Diagram](https://drive.google.com/file/d/1WcJ86UYoO9e4S2_K3oaGFfPS9JR9rR2P/view?usp=sharing)
 
