@@ -40,7 +40,7 @@ Stop Byte (2 uint8_t)
 
 ## Recieved Messages
 
-### Message Type 14 (Master Reset)
+### Message Type 5 (Master Reset)
 
 |  |  Byte 1     |
 | -----------| ----------- |
@@ -50,7 +50,7 @@ Stop Byte (2 uint8_t)
 |Max| 1 |
 |Example| 1 |
 
-### Message Type 15 (Speed Setting from HMI)
+### Message Type 7 (Speed Setting from HMI)
 
 |  |  Byte 1     |
 | -----------| ----------- |
@@ -62,17 +62,7 @@ Stop Byte (2 uint8_t)
 
 ## Sent Messages
 
-### Message Type 8 (Switchings Per Second)
-
-|  |  Byte 1     |  Byte 2   |
-| -----------| ----------- | ----------- |
-|Message| # of Switchings | Time Since Last Triggered |
-|Variable Type| uint8_t  | uint8_t  |
-|Min| 0 | 0 |
-|Max| 255 | 100  |
-|Example| 12 | 24 (24 hundreths of a second) |
-
-### Message Type 9 (Error)
+### Message Type 3 (Error)
 
 |  |  Byte 1     | 
 | -----------| ----------- | 
@@ -94,19 +84,9 @@ Error Types:
 
 5: Bytes per Message Overflow
 
-### Message Type 10 (Reset)
-
-|  |  Byte 1     |
-| -----------| ----------- |
-|Message| Reset of Actuator System  |
-|Variable Type| uint8_t  |
-|Min| 0  |
-|Max| 1  |
-|Example| 1 (Reset)|
-
 ## Code Handling
 
-Priority is placed on retransmitting incoming data before transmitting personal data as the outgoing Actuator data is not time sensitive (other than errors).
+Since there are no i
 
 When Actuator Subsystem receives a message, the following is the protocol for handling:
 
