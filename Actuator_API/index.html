@@ -514,15 +514,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#message-type-14-master-reset" class="md-nav__link">
-    Message Type 14 (Master Reset)
+  <a href="#message-type-5-master-reset" class="md-nav__link">
+    Message Type 5 (Master Reset)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#message-type-15-speed-setting-from-hmi" class="md-nav__link">
-    Message Type 15 (Speed Setting from HMI)
+  <a href="#message-type-7-speed-setting-from-hmi" class="md-nav__link">
+    Message Type 7 (Speed Setting from HMI)
   </a>
   
 </li>
@@ -541,22 +541,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#message-type-8-switchings-per-second" class="md-nav__link">
-    Message Type 8 (Switchings Per Second)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#message-type-9-error" class="md-nav__link">
-    Message Type 9 (Error)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#message-type-10-reset" class="md-nav__link">
-    Message Type 10 (Reset)
+  <a href="#message-type-3-error" class="md-nav__link">
+    Message Type 3 (Error)
   </a>
   
 </li>
@@ -805,15 +791,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#message-type-14-master-reset" class="md-nav__link">
-    Message Type 14 (Master Reset)
+  <a href="#message-type-5-master-reset" class="md-nav__link">
+    Message Type 5 (Master Reset)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#message-type-15-speed-setting-from-hmi" class="md-nav__link">
-    Message Type 15 (Speed Setting from HMI)
+  <a href="#message-type-7-speed-setting-from-hmi" class="md-nav__link">
+    Message Type 7 (Speed Setting from HMI)
   </a>
   
 </li>
@@ -832,22 +818,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#message-type-8-switchings-per-second" class="md-nav__link">
-    Message Type 8 (Switchings Per Second)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#message-type-9-error" class="md-nav__link">
-    Message Type 9 (Error)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#message-type-10-reset" class="md-nav__link">
-    Message Type 10 (Reset)
+  <a href="#message-type-3-error" class="md-nav__link">
+    Message Type 3 (Error)
   </a>
   
 </li>
@@ -948,7 +920,7 @@
 </tbody>
 </table>
 <h2 id="recieved-messages">Recieved Messages</h2>
-<h3 id="message-type-14-master-reset">Message Type 14 (Master Reset)</h3>
+<h3 id="message-type-5-master-reset">Message Type 5 (Master Reset)</h3>
 <table>
 <thead>
 <tr>
@@ -979,7 +951,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="message-type-15-speed-setting-from-hmi">Message Type 15 (Speed Setting from HMI)</h3>
+<h3 id="message-type-7-speed-setting-from-hmi">Message Type 7 (Speed Setting from HMI)</h3>
 <table>
 <thead>
 <tr>
@@ -1011,44 +983,7 @@
 </tbody>
 </table>
 <h2 id="sent-messages">Sent Messages</h2>
-<h3 id="message-type-8-switchings-per-second">Message Type 8 (Switchings Per Second)</h3>
-<table>
-<thead>
-<tr>
-<th></th>
-<th>Byte 1</th>
-<th>Byte 2</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Message</td>
-<td># of Switchings</td>
-<td>Time Since Last Triggered</td>
-</tr>
-<tr>
-<td>Variable Type</td>
-<td>uint8_t</td>
-<td>uint8_t</td>
-</tr>
-<tr>
-<td>Min</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr>
-<td>Max</td>
-<td>255</td>
-<td>100</td>
-</tr>
-<tr>
-<td>Example</td>
-<td>12</td>
-<td>24 (24 hundreths of a second)</td>
-</tr>
-</tbody>
-</table>
-<h3 id="message-type-9-error">Message Type 9 (Error)</h3>
+<h3 id="message-type-3-error">Message Type 3 (Error)</h3>
 <table>
 <thead>
 <tr>
@@ -1085,42 +1020,11 @@
 <p>3: Incorrect / No Message Type</p>
 <p>4: Incorrect Data Value in Valid Message</p>
 <p>5: Bytes per Message Overflow</p>
-<h3 id="message-type-10-reset">Message Type 10 (Reset)</h3>
-<table>
-<thead>
-<tr>
-<th></th>
-<th>Byte 1</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Message</td>
-<td>Reset of Actuator System</td>
-</tr>
-<tr>
-<td>Variable Type</td>
-<td>uint8_t</td>
-</tr>
-<tr>
-<td>Min</td>
-<td>0</td>
-</tr>
-<tr>
-<td>Max</td>
-<td>1</td>
-</tr>
-<tr>
-<td>Example</td>
-<td>1 (Reset)</td>
-</tr>
-</tbody>
-</table>
 <h2 id="code-handling">Code Handling</h2>
-<p>Priority is placed on retransmitting incoming data before transmitting personal data as the outgoing Actuator data is not time sensitive (other than errors).</p>
+<p>Since there are no actuator messages other than errors, all retransmissions take priority</p>
 <p>When Actuator Subsystem receives a message, the following is the protocol for handling:</p>
 <ol>
-<li>Identify start and begin copying it to array for retransmission</li>
+<li>Copy incoming message to array to check if it fits API format / is valid</li>
 <li>After message is copied to array, check begin error check</li>
 <li>
 <p>When no errors for bytes 1-3, check receiver address:</p>
@@ -1129,31 +1033,25 @@
 <p>3c. If broadcast byte, retransmit message, and continue to step 4</p>
 </li>
 <li>
-<p>Utilize message information</p>
+<p>Utilize message information (When applicable)</p>
 </li>
 <li>Trash Message (Done automatically when next message is received)</li>
-<li>Transmit relevant data when not transmitting priority data</li>
+<li>Transmit if message is not for me or broadcast</li>
+<li>If there is an error, transmit</li>
 <li>Continue from step one when receiving a new message</li>
 </ol>
 <p>For each step, there will be an error check to confirm the message is valid. Should it fail, the error code and address it was sent from will be transmitted.</p>
 <p>Should characters be sent outside of start or stop bits, they are ignored and trashed.</p>
-<p>To elaborate on step 6 and error handling</p>
-<ol>
-<li>Whenever an interruptive event occurs (ie  error or reset) identify and redirect to appropriate function</li>
-<li></li>
-<li></li>
-<li>Check if already transmitting, if so wait for transmission to end and delay then send</li>
-<li>Otherwise send</li>
-<li>
-<p>If error:</p>
-<p>8a. When mine, sends hardcoded error to MQTT
-8b. If other error, retransmitted as normal</p>
-</li>
-<li>
-<p>If reset message, halt system and retransmit to MQTT</p>
-</li>
-</ol>
-<p>A group sending schedule may be implemented to improve message success rates and ensure minimal message loss.</p>
+<p>For error handling and reset:</p>
+<p>When reset is received:</p>
+<ul>
+<li>Halt system and reinitialize</li>
+<li>Resume once message received</li>
+</ul>
+<p>When error is received:</p>
+<ul>
+<li>Halt system and retransmit, wait for reset command</li>
+</ul>
 
 
 
