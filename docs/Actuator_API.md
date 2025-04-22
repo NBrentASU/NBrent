@@ -86,11 +86,11 @@ Error Types:
 
 ## Code Handling
 
-Since there are no i
+Since there are no actuator messages other than errors, all retransmissions take priority
 
 When Actuator Subsystem receives a message, the following is the protocol for handling:
 
-1. Identify start and begin copying it to array for retransmission
+1. Copy incoming message to array to check if it fits API format / is valid
 2. After message is copied to array, check begin error check
 3. When no errors for bytes 1-3, check receiver address:
 
@@ -100,27 +100,23 @@ When Actuator Subsystem receives a message, the following is the protocol for ha
 
     3c. If broadcast byte, retransmit message, and continue to step 4
     
-4. Utilize message information
+4. Utilize message information (When applicable)
 5. Trash Message (Done automatically when next message is received)
-6. Transmit relevant data when not transmitting priority data
-7. Continue from step one when receiving a new message
+6. Transmit if message is not for me or broadcast
+7. If there is an error, transmit
+8. Continue from step one when receiving a new message
 
 For each step, there will be an error check to confirm the message is valid. Should it fail, the error code and address it was sent from will be transmitted.
 
 Should characters be sent outside of start or stop bits, they are ignored and trashed.
 
-To elaborate on step 6 and error handling
+For error handling and reset:
 
-1. Whenever an interruptive event occurs (ie  error or reset) identify and redirect to appropriate function
-2. 
-5. 
-6. Check if already transmitting, if so wait for transmission to end and delay then send
-7. Otherwise send
-8. If error:
+When reset is received:
 
-    8a. When mine, sends hardcoded error to MQTT
-    8b. If other error, retransmitted as normal
+- Halt system and reinitialize
+- Resume once message received
 
-9. If reset message, halt system and retransmit to MQTT
+When error is received:
 
-A group sending schedule may be implemented to improve message success rates and ensure minimal message loss.
+- Halt system and retransmit, wait for reset command
