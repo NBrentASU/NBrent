@@ -15,4 +15,8 @@ Above is the actuator PCB design
 
 ![](https://github.com/NBrentASU/NBrent/blob/main/PCBIRL.jpg?raw=true)
 
-Above this image are the manufactured boards received from JLCPCB before and after soldering. Currently not debugged so additional hardware may be added to fix errors in design or manufacturing
+Above this image are the manufactured boards received from JLCPCB before and after soldering but before debugging
+
+
+
+This is the PCB post debug used at the Innovation showcase

@@ -2,9 +2,11 @@
 title: Actuator Component Selection
 ---
 
-## Component Selection - Actuator Subsystem
+## Component Selection - Actuator Subsystem\
 
-#### Microcontroller
+### Summary of Major Components
+
+
 
 ### Microcontrollers
 
@@ -16,23 +18,23 @@ title: Actuator Component Selection
 
 #### Selection
 
-Despite having some downsides memory-wise when compared to the PIC18F27Q10 (SOIC/28), the PIC18F24Q24 (SOIC/28) had the datasheet that best-described functionality regarding our use case which is why the component was selected.
+Despite having some downsides memory-wise when compared to the PIC18F27Q10 (SOIC/28), the PIC18F27Q10 (SOIC/28) had the datasheet that best-described functionality regarding our use case which is why the component was selected.
 
 #### Selected PIC Info
 
 | PIC18F24Q24 Info   |  Answer     |
 | ------------------ | ----------- |
-| Product Page       | [PIC18F24Q24 (SOIC/28)](https://www.microchip.com/en-us/product/pic18f24q24#Documentation)        |
-| Datasheet          | [Datasheet](https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ProductDocuments/DataSheets/PIC18F24-25Q24-Microcontroller-Data-Sheet-DS40002517.pdf)        |
-| Application Notes  | [Application Notes](https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ApplicationNotes/ApplicationNotes/AN5226-Getting-Started-PIC18-Q24-Family-DS00005226.pdf)        |
+| Product Page       | [PIC18F27Q10 (SOIC/28)](https://www.microchip.com/en-us/product/pic18f27q10#Documentation)        |
+| Datasheet          | [Datasheet](https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ProductDocuments/DataSheets/PIC18F27-47Q10-Micorcontroller-Data-Sheet-DS40002043.pdf)        |
+| Application Notes  | [Application Notes](https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ProductDocuments/DataSheets/PIC18F27-47Q10-Micorcontroller-Data-Sheet-DS40002043.pdf)        |
 | Vendor             | [Microchip](https://www.microchip.com/)        |
 | Examples           | [Examples](https://github.com/eziya/PIC18F_Examples)          |
 | External Resources | [External Resources](https://github.com/eziya/PIC18F_Examples)         |
-| Unit Cost          | $0.95         |
+| Unit Cost          | $1.34        |
 | Max IC Current     | 250 mA         |
 | Max GPIO Current   | 20 mA          |
 | Interrupt Support  | Yes         |
-| Requirements       | [Requirements (On Datasheet)](https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ProductDocuments/DataSheets/PIC18F24-25Q24-Microcontroller-Data-Sheet-DS40002517.pdf)                  |
+| Requirements       | [Requirements (On Datasheet)](https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ProductDocuments/DataSheets/PIC18F27-47Q10-Micorcontroller-Data-Sheet-DS40002043.pdf)                  |
 | MPLabX Support     | Yes         |
 | MCC Support        | Yes           |
 
@@ -40,10 +42,10 @@ Despite having some downsides memory-wise when compared to the PIC18F27Q10 (SOIC
 
 | Module         | # Available | Needed | Associated Pins |
 | -------------- | ----------- | ------ | ------------------------------ |
-| UART           |  2           | 2      |GPIO43 ~ GPIO44, GPIO17 ~ GPIO18|
+| UART           |  4           | 2      |GPIO43 ~ GPIO44, GPIO17 ~ GPIO18|
 | External SPI   |  2           | 1      | SDI, SDO, SCK                            |
 | I2C            |  2           | 0      | SDA, SDL                           |
-| GPIO           |  2           | 2      | *                              |
+| GPIO           |  10           | 6      | *                              |
 | ADC            |  19           | 0      | ADC                           |
 | PWM            |  3           | 0      | *                              |
 | ICSP           |  3          | 3      | DAT, SCK, MCLR                         |
