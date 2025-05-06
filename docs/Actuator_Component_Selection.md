@@ -6,6 +6,12 @@ title: Actuator Component Selection
 
 ### Summary of Major Components
 
+| Component | Selected Part |
+| ----- | ----- |
+| Microcontroller | ![](https://github.com/NBrentASU/NBrent/blob/main/PIC2.png?raw=true)[PIC18F27Q10 (SOIC/28)](https://www.microchip.com/en-us/product/pic18f27q10#Documentation) |
+| Voltage Regulators  | ![](https://github.com/NBrentASU/NBrent/blob/main/SV2.jpg?raw=true)[LM2674MX-3.3/NOPB](https://www.digikey.com/en/products/detail/texas-instruments/LM2674MX-3-3-NOPB/366902) and ![](https://github.com/NBrentASU/NBrent/blob/main/MV3.jpg?raw=true)[LM2594M-ADJ](https://www.digikey.com/en/products/detail/umw/LM2594M-ADJ/16705956?s=N4IgjCBcoCwdIDGUBmBDANgZwKYBoQB7KAbRAGYwAGcgdgCYQBdAgBwBcoQBldgJwCWAOwDmIAL4EAtDCihkkdNnwgAbkNSZcBYpDLUArDFpVmbTpBATx4oA)  |
+| SPI Driver(s) | ![](https://github.com/NBrentASU/NBrent/blob/main/MD3.jpg?raw=true)[NCV7703CD2R2G](https://www.digikey.com/en/products/detail/onsemi/NCV7703CD2R2G/7325621) |
+| Electromagnet(s) | Homemade with 28AWG wire, printed coil, and soft iron core     |
 
 
 ### Microcontrollers

@@ -28,10 +28,6 @@ The microcontroller section contains all of the necessary hardware to operate, d
 
 The electromagnet section contains 2 electromagnets with bi-directional EMF flyback diodes, each with an SPI driver communicating with the PIC. This system allows a reduced SPI pin requirement as each chip can be activated from their CSB pin. From there, serial data will be sent to determine current flow which will affect the direction of the magnetic flow to push or pull the marble. These SPI drivers are 16 bit whereas the PIC is only 8-bit. However, the PIC has an operational range of 64 MHz where the chips operate at 5 MHz meaning 2 8-bit messages can be sent to mimic the 16-bit signal expected by the chip.
 
-### Functionality and User Needs
-
-
-
 ### Version 2.0
 
 Should I recreate this schematic and PCB, there are a few things I would have changed. First of which would have been to include relays after the SPI drivers. Power was always a concern for these electromagnets and I had made the assumption that a driver needed to solely do this. From research, I had chosen the highest amperage SPI surfacemount driver I could find and the electromagnet calculations seemed to check out until testing. However, having relays that can be toggled with the driver would have ensured I could have better power flexibility for the magnets. Second, designing the board for the PIC18F27Q10 from the start instead of choosing another chip. Trying to use a PIC outside the model used in class caused a lot of issues which lead to it being replaced. Removing as many unknowns from the hardware design would leave as much time as possible to fix other issues that would come up. Finally, including more breakout pins. I had not left any pins for issues that could arise but instead grounded my unused pins. This caused a lot of wasted time as in order to access these pins I needed to separate them from ground and solder wire to the small footprint instead of having an easily accessable header.
