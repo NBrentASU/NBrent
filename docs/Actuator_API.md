@@ -36,6 +36,7 @@ Stop Byte (2 uint8_t)
 |Evan Skinner| E |
 |Kirk Volin| K |
 |Hunter Hassebroek| H |
+|Dominick Trusko| D |
 | Broadcast | X |
 
 ## Recieved Messages
@@ -114,9 +115,8 @@ For error handling and reset:
 
 When reset is received:
 
-- Halt system and reinitialize
-- Resume once message received
+- Halt system and do software reinitialization
 
 When error is received:
 
-- Halt system and retransmit, wait for reset command
+- Retransmit, continue if possible otherwise wait for reset
