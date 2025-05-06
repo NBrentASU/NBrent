@@ -339,19 +339,16 @@
   
   
   
-    
-    
-      <li class="md-tabs__item">
-        <a href="../subfolder/" class="md-tabs__link">
-          
+    <li class="md-tabs__item">
+      <a href="../Resources/" class="md-tabs__link">
+        
   
     
   
-  Subfolder
+  Resources
 
-        </a>
-      </li>
-    
+      </a>
+    </li>
   
 
       
@@ -686,40 +683,16 @@
   
   
   
-    
-    
-      
+    <li class="md-nav__item">
+      <a href="../Resources/" class="md-nav__link">
         
-          
-        
-      
-        
-      
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../subfolder/" class="md-nav__link">
-      
   
   <span class="md-ellipsis">
-    Subfolder
+    Resources
   </span>
   
 
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
+      </a>
     </li>
   
 
@@ -914,6 +887,10 @@
 <td>H</td>
 </tr>
 <tr>
+<td>Dominick Trusko</td>
+<td>D</td>
+</tr>
+<tr>
 <td>Broadcast</td>
 <td>X</td>
 </tr>
@@ -1045,12 +1022,11 @@
 <p>For error handling and reset:</p>
 <p>When reset is received:</p>
 <ul>
-<li>Halt system and reinitialize</li>
-<li>Resume once message received</li>
+<li>Halt system and do software reinitialization</li>
 </ul>
 <p>When error is received:</p>
 <ul>
-<li>Halt system and retransmit, wait for reset command</li>
+<li>Retransmit, continue if possible otherwise wait for reset</li>
 </ul>
 
 
