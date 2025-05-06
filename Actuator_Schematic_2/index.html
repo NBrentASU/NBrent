@@ -598,13 +598,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#functionality-and-user-needs" class="md-nav__link">
-    Functionality and User Needs
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#version-20" class="md-nav__link">
     Version 2.0
   </a>
@@ -683,13 +676,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#functionality-and-user-needs" class="md-nav__link">
-    Functionality and User Needs
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#version-20" class="md-nav__link">
     Version 2.0
   </a>
@@ -737,7 +723,6 @@
 <p>The connectors section contains the programming and daisy chain connections. The Snap programmer provided by the professors requires 5 pins (MCLR, VDD, GND, DAT, CLK) in order to properly interface with the provided PIC. Using a set of 5 headers allows for easy programming through paths to their respective ICSP pins. The 2x4 molex connector is the daisy chain which facilitates board-to-board communication and eventual power transfer. Pins 1-5 and 8 will be used to send and recieve information to control and document the electromagnetic switchings.</p>
 <p>The microcontroller section contains all of the necessary hardware to operate, debug, and program the PIC microcontroller. This includes the MCLR programming circuit, ICSP programming pins, debugging LEDS, pushbutton for testing, UART messaging pins, and SPI interfacing with electromagnets.</p>
 <p>The electromagnet section contains 2 electromagnets with bi-directional EMF flyback diodes, each with an SPI driver communicating with the PIC. This system allows a reduced SPI pin requirement as each chip can be activated from their CSB pin. From there, serial data will be sent to determine current flow which will affect the direction of the magnetic flow to push or pull the marble. These SPI drivers are 16 bit whereas the PIC is only 8-bit. However, the PIC has an operational range of 64 MHz where the chips operate at 5 MHz meaning 2 8-bit messages can be sent to mimic the 16-bit signal expected by the chip.</p>
-<h3 id="functionality-and-user-needs">Functionality and User Needs</h3>
 <h3 id="version-20">Version 2.0</h3>
 <p>Should I recreate this schematic and PCB, there are a few things I would have changed. First of which would have been to include relays after the SPI drivers. Power was always a concern for these electromagnets and I had made the assumption that a driver needed to solely do this. From research, I had chosen the highest amperage SPI surfacemount driver I could find and the electromagnet calculations seemed to check out until testing. However, having relays that can be toggled with the driver would have ensured I could have better power flexibility for the magnets. Second, designing the board for the PIC18F27Q10 from the start instead of choosing another chip. Trying to use a PIC outside the model used in class caused a lot of issues which lead to it being replaced. Removing as many unknowns from the hardware design would leave as much time as possible to fix other issues that would come up. Finally, including more breakout pins. I had not left any pins for issues that could arise but instead grounded my unused pins. This caused a lot of wasted time as in order to access these pins I needed to separate them from ground and solder wire to the small footprint instead of having an easily accessable header.</p>
 
